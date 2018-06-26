@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">ITQuiz</string>
+
+    <!-- Strings found in the activity_main.xml -->
+    <!-- Image Content Description -->
+    <string name="circuit_board">Circuit Board</string>
+    <string name="question_four_image_description">USB 3.0</string>
+    <string name="scroll_view_background">Technology Background</string>
+
+    <!-- Question One Stings -->
+    <string name="question_one_question">1. What does DHCP stand for?</string>
+    <!-- Question One Answer Strings -->
+    <string name="question_one_answer_one">Dual Hydro Cooling Pipes</string>
+    <string name="question_one_answer_two">Dynamic Host Configuration Protocol</string>
+    <string name="question_one_answer_three">Dual Hyper Connection Protocol</string>
+    <string name="question_one_answer_four">Dynamic Horizontal Color Printer</string>
+
+    <!-- Question Two Stings -->
+    <string name="question_two_question">2. What does DNS stand for?</string>
+    <!-- Question Two Answer Strings -->
+    <string name="question_two_answer_one">Domain Name Server</string>
+    <string name="question_two_answer_two">Domain Name Service</string>
+    <string name="question_two_answer_three">Domain Name System</string>
+    <string name="question_two_answer_four">Domain Name Space</string>
+
+    <!-- Question Three Stings -->
+    <string name="question_three_question">3. SSD means?</string>
+    <!-- Question Three Hint Strings -->
+    <string name="question_three_text_hint">Type answer here</string>
+
+    <!-- Question Four Stings -->
+    <string name="question_four_question">4. What is AD used for?</string>
+    <!-- Question Four Answer Strings -->
+    <string name="question_four_answer_one">To authenticate and authorize all users and computers in a Windows domain type network</string>
+    <string name="question_four_answer_two">To assign and enforce security policies for all computers</string>
+    <string name="question_four_answer_three">To install or updating software</string>
+    <string name="question_four_answer_four">All of the above</string>
+
+    <!-- Question Five Stings -->
+    <string name="question_five_question">5. What is the meaning of SS in the picture?</string>
+    <!-- Question Five Answer Strings -->
+    <string name="question_five_answer_one">Super Speed</string>
+    <string name="question_five_answer_two">Solid State</string>
+    <string name="question_five_answer_three">Short SATA</string>
+    <string name="question_five_answer_four">Secondary Storage</string>
+
+    <!-- Button Strings -->
+    <string name="reset_button">Reset</string>
+    <string name="submit_button">Submit</string>
+
+
+    <!-- Strings found in the MainActivity.java -->
+    <!-- Question Three Correct Answer -->
+    <string name="question_three_correct_answer">solid state drive</string>
+
+    <!-- Correct and Wrong Toast Messages -->
+    <string name="pass_quiz_toast_message">YOU ARE A COMPUTER WIZ!</string>
+    <string name="wrong_answers_toast_message">Oh no, the following questions are wrong; </string>
+
+    <!-- Wrong questions strings added to toast message-->
+    <string name="question_one">Question 1</string>
+    <string name="question_two">Question 2</string>
+    <string name="question_three">Question 3</string>
+    <string name="question_four">Question 4</string>
+    <string name="question_five">Question 5</string>
+
+    <!-- Too many answers strings for toast message -->
+    <string name="too_many_answer_question_four">Too many answers checked in Question 4</string>
+    <string name="too_many_answer_question_five">Too many answers checked in Question 5</string>
+
+</resources>
