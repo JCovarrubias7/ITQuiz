@@ -40,8 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Getting user input from question three answer field
         EditText userAnswerThreeField = findViewById(R.id.question_three_answer_field);
-        String userAnswerToQuestionThree = userAnswerThreeField.getText().toString();
-        userAnswerToQuestionThree = userAnswerToQuestionThree.toLowerCase();
+        String userAnswerToQuestionThree = userAnswerThreeField.getText().toString().trim();
 
         // Get question four's radio button correct answer status
         int questionFourCheckedBoxes = 0;
@@ -91,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Question three
-        if (userAnswerToQuestionThree.equals(questionThreeAnswer)) {
+        if (userAnswerToQuestionThree.equalsIgnoreCase(questionThreeAnswer)) {
             correctAnswers++;
         } else {
             wrongAnswerMessage += "\n" + getString(R.string.question_three);
