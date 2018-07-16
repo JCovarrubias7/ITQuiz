@@ -32,11 +32,9 @@ public class MainActivity extends AppCompatActivity {
 
         // Get question one's radio button correct answer status
         RadioButton questionOneCheckBox = findViewById(R.id.question_one_answer_button);
-        boolean questionOneChecked = questionOneCheckBox.isChecked();
 
         // Get question two's radio button correct answer status
         RadioButton questionTwoCheckBox = findViewById(R.id.question_two_answer_button);
-        boolean questionTwoChecked = questionTwoCheckBox.isChecked();
 
         // Getting user input from question three answer field
         EditText userAnswerThreeField = findViewById(R.id.question_three_answer_field);
@@ -50,19 +48,18 @@ public class MainActivity extends AppCompatActivity {
 
         // Get question five's radio button correct answer status
         RadioButton questionFiveCheckBox = findViewById(R.id.question_five_answer_button);
-        boolean questionFiveChecked = questionFiveCheckBox.isChecked();
 
         // Checking answers for the questions
 
         // Question one
-        if (questionOneChecked) {
+        if (questionOneCheckBox.isChecked()) {
             correctAnswers++;
         } else {
             wrongAnswerMessage += "\n" + getString(R.string.question_one);
         }
 
         // Question two
-        if (questionTwoChecked) {
+        if (questionTwoCheckBox.isChecked()) {
             correctAnswers++;
         } else {
             wrongAnswerMessage += "\n" + getString(R.string.question_two);
@@ -83,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Question five
-        if (questionFiveChecked) {
+        if (questionFiveCheckBox.isChecked()) {
             correctAnswers++;
         } else {
             wrongAnswerMessage += "\n" + getString(R.string.question_five);
@@ -91,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Toast to display if answers are incorrect
         if (correctAnswers < 5) {
-            wrongAnswerMessage += "\n" + getString(R.string.total_answers_correct) + correctAnswers + getString(R.string.total_slash_5);
+            wrongAnswerMessage += "\n" + getString(R.string.total_answers_correct) + correctAnswers + getString(R.string.total_slash_five);
             Context context = getApplicationContext();
             int duration = Toast.LENGTH_SHORT;
 
@@ -99,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
             toast.show();
         } else {
             // Add correct number of questions to correctAnswerMessage
-            correctAnswerMessage += "\n" + getString(R.string.total_answers_correct) + correctAnswers + getString(R.string.total_slash_5);
+            correctAnswerMessage += "\n" + getString(R.string.total_answers_correct) + correctAnswers + getString(R.string.total_slash_five);
 
             //Toast to display when all answer are correct
             Context context = getApplicationContext();
@@ -109,11 +106,13 @@ public class MainActivity extends AppCompatActivity {
             toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
             toast.show();
 
+            // Reset app to start again
             Intent intent = getIntent();
             finish();
             startActivity(intent);
         }
     }
+
     /**
      * This method is called when the reset button is clicked.
      */
