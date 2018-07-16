@@ -71,31 +71,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Get question five's radio button correct answer status
-        int questionFiveCheckedBoxes = 0;
-        CheckBox questionFiveCheckBoxOne = findViewById(R.id.question_five_check_box_one);
-        boolean questionFiveCheckBoxOneChecked = questionFiveCheckBoxOne.isChecked();
-
-        CheckBox questionFiveCheckBoxTwo = findViewById(R.id.question_five_check_box_two);
-        boolean questionFiveCheckBoxTwoChecked = questionFiveCheckBoxTwo.isChecked();
-
-        CheckBox questionFiveCheckBoxThree = findViewById(R.id.question_five_check_box_three);
-        boolean questionFiveCheckBoxThreeChecked = questionFiveCheckBoxThree.isChecked();
-
-        CheckBox questionFiveCheckBoxFour = findViewById(R.id.question_five_check_box_four);
-        boolean questionFiveCheckBoxFourChecked = questionFiveCheckBoxFour.isChecked();
-
-        if (questionFiveCheckBoxOneChecked) {
-            questionFiveCheckedBoxes++;
-        }
-        if (questionFiveCheckBoxTwoChecked) {
-            questionFiveCheckedBoxes++;
-        }
-        if (questionFiveCheckBoxThreeChecked) {
-            questionFiveCheckedBoxes++;
-        }
-        if (questionFiveCheckBoxFourChecked) {
-            questionFiveCheckedBoxes++;
-        }
+        RadioButton questionFiveCheckBox = findViewById(R.id.question_five_answer_button);
+        boolean questionFiveChecked = questionFiveCheckBox.isChecked();
 
         // Checking answers for the questions
 
@@ -137,16 +114,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Question five
-        // Check to see if multiple answers are checked
-        if (questionFiveCheckedBoxes > 1) {
-            Context context = getApplicationContext();
-            CharSequence text = getString(R.string.too_many_answer_question_five);
-            int duration = Toast.LENGTH_SHORT;
-
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
-            return;
-        } else if (questionFiveCheckBoxOneChecked) {
+        if (questionFiveChecked) {
             correctAnswers++;
         } else {
             wrongAnswerMessage += "\n" + getString(R.string.question_five);

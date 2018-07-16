@@ -217,60 +217,40 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="250dp"
+                    android:layout_margin="16dp"
                     android:contentDescription="@string/question_four_image_description"
                     android:src="@drawable/usb" />
 
-                <LinearLayout
+                <RadioGroup
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content">
 
-                    <LinearLayout
+                    <RadioButton
+                        android:id="@+id/question_five_answer_button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:text="@string/question_five_answer_one"
+                        android:textSize="16sp" />
 
-                        <CheckBox
-                            android:id="@+id/question_five_check_box_one"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/question_five_answer_one"
-                            android:textSize="16sp" />
-
-                        <CheckBox
-                            android:id="@+id/question_five_check_box_two"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/question_five_answer_two"
-                            android:textSize="16sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
+                    <RadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:text="@string/question_five_answer_two"
+                        android:textSize="16sp" />
 
-                        <CheckBox
-                            android:id="@+id/question_five_check_box_three"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/question_five_answer_three"
-                            android:textSize="16sp" />
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/question_five_answer_three"
+                        android:textSize="16sp" />
 
-                        <CheckBox
-                            android:id="@+id/question_five_check_box_four"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/question_five_answer_four"
-                            android:textSize="16sp" />
-                    </LinearLayout>
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/question_five_answer_four"
+                        android:textSize="16sp" />
 
-                </LinearLayout>
+                </RadioGroup>
 
                 <View
                     android:layout_width="match_parent"
@@ -286,7 +266,6 @@
         </ScrollView>
 
     </RelativeLayout>
-
 
     <LinearLayout
         style="?android:attr/buttonBarStyle"
