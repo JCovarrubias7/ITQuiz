@@ -42,32 +42,11 @@ public class MainActivity extends AppCompatActivity {
         EditText userAnswerThreeField = findViewById(R.id.question_three_answer_field);
         String userAnswerToQuestionThree = userAnswerThreeField.getText().toString().trim();
 
-        // Get question four's radio button correct answer status
-        int questionFourCheckedBoxes = 0;
+        // Get question four's check boxes to reference when checking for right answer
         CheckBox questionFourCheckBoxOne = findViewById(R.id.question_four_check_box_one);
-        boolean questionFourCheckBoxOneChecked = questionFourCheckBoxOne.isChecked();
-
         CheckBox questionFourCheckBoxTwo = findViewById(R.id.question_four_check_box_two);
-        boolean questionFourCheckBoxTwoChecked = questionFourCheckBoxTwo.isChecked();
-
         CheckBox questionFourCheckBoxThree = findViewById(R.id.question_four_check_box_three);
-        boolean questionFourCheckBoxThreeChecked = questionFourCheckBoxThree.isChecked();
-
         CheckBox questionFourCheckBoxFour = findViewById(R.id.question_four_check_box_four);
-        boolean questionFourCheckBoxFourChecked = questionFourCheckBoxFour.isChecked();
-
-        if (questionFourCheckBoxOneChecked) {
-            questionFourCheckedBoxes++;
-        }
-        if (questionFourCheckBoxTwoChecked) {
-            questionFourCheckedBoxes++;
-        }
-        if (questionFourCheckBoxThreeChecked) {
-            questionFourCheckedBoxes++;
-        }
-        if (questionFourCheckBoxFourChecked) {
-            questionFourCheckedBoxes++;
-        }
 
         // Get question five's radio button correct answer status
         RadioButton questionFiveCheckBox = findViewById(R.id.question_five_answer_button);
@@ -97,16 +76,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Question four
-        // Check to see if multiple answers are checked
-        if (questionFourCheckedBoxes > 1) {
-            Context context = getApplicationContext();
-            CharSequence text = getString(R.string.too_many_answer_question_four);
-            int duration = Toast.LENGTH_SHORT;
-
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
-            return;
-        } else if (questionFourCheckBoxFourChecked) {
+        if (questionFourCheckBoxOne.isChecked() && questionFourCheckBoxTwo.isChecked() && questionFourCheckBoxThree.isChecked() && !questionFourCheckBoxFour.isChecked()) {
             correctAnswers++;
         } else {
             wrongAnswerMessage += "\n" + getString(R.string.question_four);
