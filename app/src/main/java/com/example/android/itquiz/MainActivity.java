@@ -91,13 +91,17 @@ public class MainActivity extends AppCompatActivity {
 
         // Toast to display if answers are incorrect
         if (correctAnswers < 5) {
+            wrongAnswerMessage += "\n" + getString(R.string.total_answers_correct) + correctAnswers + getString(R.string.total_slash_5);
             Context context = getApplicationContext();
             int duration = Toast.LENGTH_SHORT;
 
             Toast toast = Toast.makeText(context, wrongAnswerMessage, duration);
             toast.show();
         } else {
-            // What to do if every answer is correct
+            // Add correct number of questions to correctAnswerMessage
+            correctAnswerMessage += "\n" + getString(R.string.total_answers_correct) + correctAnswers + getString(R.string.total_slash_5);
+
+            //Toast to display when all answer are correct
             Context context = getApplicationContext();
             int duration = Toast.LENGTH_LONG;
 
