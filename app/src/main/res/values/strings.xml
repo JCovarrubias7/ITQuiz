@@ -55,7 +55,7 @@
 
     <!-- Correct and Wrong Toast Messages -->
     <string name="pass_quiz_toast_message">YOU ARE A COMPUTER WIZ!</string>
-    <string name="wrong_answers_toast_message">Oh no, the following questions are wrong; </string>
+    <string name="wrong_answers_toast_message">Oh no, the following questions are wrong: </string>
 
     <!-- Wrong questions strings added to toast message-->
     <string name="question_one">Question 1</string>
@@ -64,7 +64,7 @@
     <string name="question_four">Question 4</string>
     <string name="question_five">Question 5</string>
 
-    <!-- Too many answers strings for toast message -->
-    <string name="too_many_answer_question_four">Too many answers checked in Question 4</string>
-
+    <!-- Total message added to Correct and Wrong toast messages -->
+    <string name="total_answers_correct">"Total Answers Correct: "</string>
+    <string name="total_slash_5">"/5"</string>
 </resources>
