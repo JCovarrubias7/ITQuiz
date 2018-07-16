@@ -66,5 +66,5 @@
 
     <!-- Total message added to Correct and Wrong toast messages -->
     <string name="total_answers_correct">"Total Answers Correct: "</string>
-    <string name="total_slash_5">"/5"</string>
+    <string name="total_slash_five">"/5"</string>
 </resources>
